@@ -365,3 +365,64 @@ copyright {
   font-size: 12px;
   color: #6f7f99;
 }
+
+/* --- RESPONSIVE AYARLAR --- */
+
+/* 1. Tablet ve Küçük Ekranlar (992px altı) */
+@media (max-width: 992px) {
+  .routes-grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 sütun yerine 2 sütuna düşer */
+    gap: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 2.5rem; /* Yazıları biraz küçültelim */
+  }
+}
+
+/* 2. Mobil Telefonlar (768px altı) */
+@media (max-width: 768px) {
+  /* Navigasyonu dikey yapalım */
+  .navbar {
+    flex-direction: column;
+    padding: 15px !important;
+  }
+  
+  .nav-link {
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  /* Rotaları tek sütuna indir */
+  .routes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabloyu mobilde kaydırılabilir yapalım (Taşmayı önler) */
+  .table-wrapper {
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+  }
+
+  .hero-content p {
+    font-size: 1.8rem;
+  }
+  
+  #ucuncup {
+    font-size: 1rem;
+  }
+}
+
+/* 3. Çok Küçük Ekranlar (480px altı) */
+@media (max-width: 480px) {
+  .taban-form {
+    display: flex;
+    flex-direction: column; /* Input ve butonu alt alta getir */
+    gap: 10px;
+  }
+
+  .taban-form input {
+    width: 100%;
+  }
+}
