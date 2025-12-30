@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+section {
+  scroll-margin-top: 90px; /* navbar yüksekliği kadar */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 40px;
+
+    background: rgba(26, 17, 17, 0); /* TAM ŞEFFAF */
+    backdrop-filter: blur(0px);
+
+    transition: 
+      background 0.4s ease,
+      backdrop-filter 0.4s ease,
+      padding 0.3s ease;
+}
+
+#ucuncup {
+  color: #cfd8dc;
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+  text-shadow: none;
+}
+
+/* Logo */
+.logo {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: font-size 0.3s ease;
+}
+
+/* Menü */
+.nav-link {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link a:hover {
+  color: #00bcd4;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  padding-top: 0;
+  background-image: url("sadsdsds.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content p:nth-child(2) {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 1.1px; /* düşürdük */
+  line-height: 1.1; /* yükselttik */
+  margin-bottom: 17px;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-content p {
+  word-spacing: 7px;
+  line-height: 1.1;
+  font-size: 90px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 5px #fff;
+}
+
+.navbar.scrolled {
+  padding: 10px 40px;      
+  background: #1a1111;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.routes {
+  padding: 80px 8%;
+  background: radial-gradient(circle at top, #0b1220, #05070c);
+  color: #fff;
+}
+
+/* Başlık */
+.routes-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.routes-header .line {
+  width: 4px;
+  height: 24px;
+  background: #00c6ff;
+  border-radius: 2px;
+}
+
+.routes-header h2 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Grid */
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Kart */
+.route-card {
+  position: relative;
+  background: linear-gradient(180deg, #000, #121a2f);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.route-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 198, 255, 0.15);
+}
+
+/* Üst görsel alan */
+.route-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+/* Alt içerik */
+.route-content {
+  padding: 24px;
+  background: #151d33;
+}
+
+.route-content h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.route-content p {
+  font-size: 0.9rem;
+  color: #cfd8dc;
+  line-height: 1.5;
+}
+
+/* İndirim etiketi */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ff2d55;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.paketler {
+  padding: 100px 8%;
+  background: radial-gradient(circle at top, #0b1020, #060814);
+  color: #fff;
+}
+
+.paketler h2 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+}
+
+thead {
+  background: #00c8ff;
+}
+
+thead th {
+  padding: 18px;
+  text-align: left;
+  color: #00121f;
+  font-weight: bold;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+tbody tr:hover {
+  background: rgba(0, 200, 255, 0.05);
+}
+
+tbody td {
+  padding: 18px;
+  font-size: 15px;
+  color: #dbe9ff;
+}
+
+.fiyat {
+  color: #00c8ff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* tabanişko Bölümü */
+
+.taban {
+  padding: 120px 20px;
+  background: radial-gradient(circle at top, #0b1020, #05070f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.taban-box {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.taban-box h2 {
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.taban-box p {
+  color: #a9b7d0;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+.taban-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.taban-form input {
+  width: 300px;
+  max-width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+}
+
+.taban-form input::placeholder {
+  color: #7f8fa6;
+}
+
+.taban-form button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c8ff, #0099ff);
+  color: #00121f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taban-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 200, 255, 0.4);
+}
+
+copyright {
+  font-size: 12px;
+  color: #6f7f99;
+}
