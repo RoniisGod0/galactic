@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description">Galactic Uzay Turizmi - Sınırları Aşın, Evreni Keşfedin!</meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uzay Turizmi | Mars & Ay Yolculukları – GALACTIC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">GALACTIC</a>
+        <ul class="nav-link">
+          <li><a href="#routes">Turlar</a></li>
+          <li><a href="#paketler">Gemi Filosu</a></li>
+          <li><a href="#taban">İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p>SINIRLARI AŞIN.</p>
+        <p>EVRENİ KEŞFEDİN.</p>
+        <p id="ucuncup">
+          Hayatınızın en unutulmaz yolculuğuna Mars kolonimizde başlayın.
+        </p>
+
+        <a href="#" class="hero-btn">Rezervasyon Yap</a>
+      </div>
+    </section>
+
+    <section class="routes" id="routes">
+      <div class="routes-header">
+        <span class="line"></span>
+        <h2>POPÜLER ROTALAR</h2>
+      </div>
+
+      <div class="routes-grid">
+        <div class="route-card">
+          <div class="route-image">🌕</div>
+          <div class="route-content">
+            <h3>AY ÜSSÜ ALPHA</h3>
+            <p>Dünya manzaralı lüks kapsüllerimizde hafta sonu kaçamağı.</p>
+          </div>
+        </div>
+
+        <div class="route-card featured">
+          <span class="badge">%20 İNDİRİM</span>
+          <div class="route-image">🪐</div>
+          <div class="route-content">
+            <h3>SATÜRN HALKALARI</h3>
+            <p>
+              Halkaların üzerinde süzülen otelimizde yerçekimsiz ortam deneyimi.
+            </p>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-image">🔴</div>
+          <div class="route-content">
+            <h3>KIZIL GEZEGEN MARS</h3>
+            <p>Olympus Mons tırmanışı ve antik nehir yataklarında safari.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paketler " id="paketler">
+      <h2>UÇUŞ PAKETLERİ</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Paket Adı</th>
+              <th>Süre</th>
+              <th>Hizmetler</th>
+              <th>Fiyat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ekonomi Sınıfı</td>
+              <td>3 Gün</td>
+              <td>Standart Yemek, Uyku Kapsülü</td>
+              <td class="fiyat">₺5,000</td>
+            </tr>
+            <tr>
+              <td>Business Class</td>
+              <td>7 Gün</td>
+              <td>Özel Oda, Sınırsız İnternet</td>
+              <td class="fiyat">₺12,000</td>
+            </tr>
+            <tr>
+              <td>Galactic VIP</td>
+              <td>14 Gün</td>
+              <td>Kişisel Pilot, Uzay Yürüyüşü</td>
+              <td class="fiyat">₺25,000</td>
+            </tr>
+            <tr>
+              <td>Platin Üyelik</td>
+              <td>30 Gün</td>
+              <td>Ay ve Mars Kombine Tur</td>
+              <td class="fiyat">₺50,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="taban" id="taban">
+      <div class="taban-box">
+        <h2>BÜLTENE ABONE OL</h2>
+        <p>Son dakika uzay fırsatlarını kaçırmayın.</p>
+
+        <form class="taban-form">
+          <input type="email" placeholder="E-posta adresiniz..." required />
+          <button type="submit">Gönder</button>
+        </form>
+
+        <span class="copyright">
+          © 2085 Galactic Travel Agency. Tüm evrensel haklar saklıdır.
+        </span>
+      </div>
+    </section>
+
+<script>
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+      navbar.style.background = "rgba(26, 17, 17, 0.9)";
+      navbar.style.backdropFilter = "blur(10px)";
+      navbar.style.padding = "12px 40px";
+    } else {
+      navbar.style.background = "rgba(26, 17, 17, 0)";
+      navbar.style.backdropFilter = "blur(0px)";
+      navbar.style.padding = "22px 40px";
+    }
+  });
+</script>
+  </body>
+</html>
