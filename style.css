@@ -10,7 +10,7 @@ body {
 }
 
 section {
-  scroll-margin-top: 90px; /* navbar yüksekliği kadar */
+  scroll-margin-top: 90px; 
 }
 
 
@@ -99,8 +99,8 @@ html {
 .hero-content p:nth-child(2) {
   font-size: 5rem;
   font-weight: 700;
-  letter-spacing: 1.1px; /* düşürdük */
-  line-height: 1.1; /* yükselttik */
+  letter-spacing: 1.1px; 
+  line-height: 1.1; 
   margin-bottom: 17px;
 }
 
@@ -426,3 +426,4 @@ copyright {
     width: 100%;
   }
 }
+
